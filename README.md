@@ -4,7 +4,7 @@ About this Fork
 This fork of SDWebImageView allows developers to track the downloading progress of images using blocks. My last for of SDWebImageView allowed you to use the OCLoader to show a downloading progress bar, but it had no flexibility. Now you can get the progress though a block and use it how you like.
 
 ```objective-c
-    [self.cellImage setDownloadProgressBlock:^(float progress) {
+    [self.myImageView setDownloadProgressBlock:^(float progress) {
         // progress comes as float
     }];
 ```
