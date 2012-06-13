@@ -67,14 +67,15 @@
     [[SDWebImageManager sharedManager] cancelForDelegate:self];
 }
 
-- (void)webImageManager:(SDWebImageManager *)imageManager didProgressWithPartialImage:(UIImage *)image forURL:(NSURL *)url
+- (void)webImageManager:(SDWebImageManager *)imageManager didFinishWithImage:(UIImage *)image
 {
     self.image = image;
 }
 
-- (void)webImageManager:(SDWebImageManager *)imageManager didFinishWithImage:(UIImage *)image
-{
-    self.image = image;
+# pragma mark - block 
+
+- (void)setDownloadProgressBlock:(void (^)(float progress))block {
+    [[SDWebImageManager sharedManager] setDownloadProgressBlock:block];
 }
 
 @end

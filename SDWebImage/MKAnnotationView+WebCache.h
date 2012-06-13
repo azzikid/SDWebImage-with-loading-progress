@@ -11,9 +11,6 @@
 #import "SDWebImageManagerDelegate.h"
 #import "SDWebImageManager.h"
 
-/**
- * Integrates SDWebImage async downloading and caching of remote images with MKAnnotationView.
- */
 @interface MKAnnotationView (WebCache) <SDWebImageManagerDelegate>
 
 /**
